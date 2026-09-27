@@ -1,0 +1,9 @@
+{
+  "id": "foolspara",
+  "name": "Fool's Paradox",
+  "author": ["Yetiskies"],
+  "description": "A Parallel Universe Balatro Expansion",
+  "prefix": "foolspara",
+  "main_file": "Fools_Paradox.lua",
+  "version": "1.0.0"
+}
