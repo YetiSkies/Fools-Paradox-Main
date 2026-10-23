@@ -491,6 +491,10 @@ return {
             }
         },
         Other={
+			foolspara_parallel = {
+                name = "Parallel",
+                text = {}
+            },
             foolspara_light_suits = {
                 name = "Light Suits",
                 text = {
