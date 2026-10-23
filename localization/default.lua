@@ -183,7 +183,312 @@ return {
                 "stays in hand"},
             }
         },
-        Joker={
+        Joker = {
+            j_foolspara_mimic = {
+                name = "Mimic",
+                text = {
+                    "Retrigger every",
+                    "scored card {C:attention}#1#{} time"
+                }
+            },
+            j_foolspara_athame = {
+                name = "Athame",
+                text = {
+                    "When Blind is selected,",
+                    "destroys the Joker to the right",
+                    "and earns {C:money}#1#X{} its sell value"
+                }
+            },
+            j_foolspara_black_flag = {
+                name = "Black Flag",
+                text = {
+                    "{X:mult,C:white} X#1# {} Mult if no",
+                    "discards have been",
+                    "used this round"
+                }
+            },
+            j_foolspara_corruption = {
+                name = "Corruption",
+                text = {
+                    "Scores a random",
+                    "{X:mult,C:white} X#1# {} to {X:mult,C:white} X#2# {} Mult"
+                }
+            },
+            j_foolspara_delusion = {
+                name = "Delusion",
+                text = {
+                    "Scores a random",
+                    "{X:chips,C:white} X#1# {} to {X:chips,C:white} X#2# {} Chips"
+                }
+            },
+            j_foolspara_err0r = {
+                name = "ERR0R",
+                text = {
+                    "Scores {C:chips}+#1#{} to {C:chips}+#2#{} Chips",
+                    "randomly"
+                }
+            },
+            j_foolspara_peace_sign = {
+                name = "Peace Sign",
+                text = {
+                    "Adds {C:attention}double{} the rank",
+                    "of the {C:attention}highest{} ranked card",
+                    "held in hand to Mult"
+                }
+            },
+            j_foolspara_reach_for_the_stars = {
+                name = "Reach for the Stars",
+                text = {
+                    "Upgrades a random poker hand",
+                    "by {C:attention}#1#{} level when Blind is selected.",
+                    "Reverts at the end of the round."
+                }
+            },
+            j_foolspara_anarchy = {
+                name = "Anarchy",
+                text = {
+                    "Mult is multiplied by the",
+                    "rank of the {C:attention}lowest{} ranked",
+                    "card held in hand"
+                }
+            },
+            j_foolspara_the_mad_minister = {
+                name = "The Mad Minister",
+                text = {
+                    "All Rerolls cost {C:money}$0{}",
+                    "All shop prices are {C:attention}x1.5{} higher"
+                }
+            },
+            j_foolspara_willy_the_wild = {
+                name = "Willy the Wild",
+                text = {
+                    "All {C:attention}Playing Cards{} that spawn",
+                    "in the {C:shop}Shop{} or {C:attention}Booster Packs{}",
+                    "always have the {C:attention}Wild Card{} enhancement"
+                }
+            },
+            j_foolspara_gratuity_fee = {
+                name = "Gratuity Fee",
+                text = {
+                    "Whenever another {C:attention}Scoring Joker{}",
+                    "triggers, lose {C:money}$#1#{} and",
+                    "this Joker gives {X:mult,C:white} X#2# {} Mult"
+                }
+            },
+            j_foolspara_pastel_pete = {
+                name = "Pastel Pete",
+                text = {
+                    "{C:mult}+#1#{} Mult and {C:chips}+#2#{} Chips",
+                    "if played hand contains",
+                    "{C:foolspara_bells}Bells{} or {C:foolspara_roses}Roses{}"
+                }
+            },
+            j_foolspara_prime_pym = {
+                name = "Prime Pym",
+                text = {
+                    "Played cards with {C:attention}Prime{} ranks",
+                    "({C:attention}2, 3, 5, 7, J, K{}) give",
+                    "{C:mult}+#1#{} Mult when scored"
+                }
+            },
+            j_foolspara_earthy_earl = {
+                name = "Earthy Earl",
+                text = {
+                    "{C:mult}+#1#{} Mult if played",
+                    "hand contains",
+                    "{C:foolspara_shields}Shields{} or {C:foolspara_acorns}Acorns{}"
+                }
+            },
+            j_foolspara_bonus_bob = {
+                name = "Bonus Bob",
+                text = {
+                    "Retrigger all played",
+                    "{C:attention}Bonus{}, {C:attention}Mult{}, or",
+                    "{C:red}Debuffed{} cards {C:attention}#1#{} time"
+                }
+            },
+            j_foolspara_composite_carl = {
+                name = "Composite Carl",
+                text = {
+                    "Played cards with {C:attention}Non-Prime{} ranks",
+                    "({C:attention}4, 6, 8, 9, 10, Q, A{}) give",
+                    "{C:mult}+#1#{} Mult when scored"
+                }
+            },
+            j_foolspara_bucket_list = {
+                name = "Bucket List",
+                text = {
+                    "{C:mult}+#1#{} Mult for each",
+                    "{C:attention}unique{} poker hand",
+                    "played this run",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_foolspara_blue_java = {
+                name = "Blue Java",
+                text = {
+                    "{X:chips,C:white} X#1# {} Chips",
+                    "{C:green}#2# in #3#{} chance this",
+                    "card is destroyed",
+                    "at end of round"
+                }
+            },
+            j_foolspara_rath_kesel = {
+                name = "Rath Kesel",
+                text = {
+                    "{C:mult}+#1#{} Mult",
+                    "{C:green}#2# in #3#{} chance this",
+                    "card is destroyed",
+                    "at end of round"
+                }
+            },
+            j_foolspara_goldfinger = {
+                name = "Goldfinger",
+                text = {
+                    "Earn {C:money}$#1#{} at",
+                    "end of round",
+                    "{C:green}#2# in #3#{} chance this",
+                    "card is destroyed",
+                    "at end of round"
+                }
+            },
+            j_foolspara_purple_card = {
+                name = "Purple Card",
+                text = {
+                    "Gains {C:chips}+#1#{} Chips when a",
+                    "consumable is used",
+                    "while a {C:attention}Booster Pack{} is open",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)"
+                }
+            },
+            j_foolspara_pentagonal_joker = {
+                name = "Pentagonal Joker",
+                text = {
+                    "Gains {C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult",
+                    "if played hand contains",
+                    "exactly {C:attention}5{} cards",
+                    "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips and {C:mult}+#4#{C:inactive} Mult)"
+                }
+            },
+            j_foolspara_divination = {
+                name = "Divination",
+                text = {
+                    "If played hand is a {C:attention}Spectrum{},",
+                    "creates a random {C:tarot}Tarot{} card"
+                }
+            },
+            j_foolspara_jinx = {
+                name = "Jinx",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "creates a random",
+                    "{C:foolspara_parallel}Parallel{} Joker"
+                }
+            },
+            j_foolspara_fastest_route = {
+                name = "Fastest Route",
+                text = {
+                    "{C:attention}Straights{} can be",
+                    "made with {C:attention}3{} cards",
+                    "{C:inactive}(ex: 2, 3, 4)"
+                }
+            },
+            j_foolspara_crazy_8 = {
+                name = "Crazy 8",
+                text = {
+                    "All played {C:attention}8s{} change",
+                    "their {C:attention}enhancement{}",
+                    "before scoring"
+                }
+            },
+            j_foolspara_wacky_6 = {
+                name = "Wacky 6",
+                text = {
+                    "All {C:attention}6s{} in your deck",
+                    "permanently become {C:attention}Bonus{} cards",
+                    "and/or {C:red}Penalty{} cards"
+                }
+            },
+            j_foolspara_free_parking = {
+                name = "Free Parking",
+                text = {
+                    "Earn {C:money}$#1#{} for each",
+                    "{C:attention}Face card{} held in hand",
+                    "at end of round"
+                }
+            },
+            j_foolspara_nuka_cola = {
+                name = "Nuka-Cola",
+                text = {
+                    "Sell this card to",
+                    "create a free",
+                    "{C:attention}Foil Tag"
+                }
+            },
+            j_foolspara_tigers_eye = {
+                name = "Tiger's Eye",
+                text = {
+                    "Each scored {C:foolspara_bells}Bell{} suit",
+                    "gives {X:chips,C:white} X#1# {} Chips"
+                }
+            },
+            j_foolspara_rose_quartz = {
+                name = "Rose Quartz",
+                text = {
+                    "{C:green}#1# in #2#{} chance for each",
+                    "scored {C:foolspara_roses}Rose{} suit",
+                    "to give {C:mult}+#3#{} Mult"
+                }
+            },
+            j_foolspara_sunstone = {
+                name = "Sunstone",
+                text = {
+                    "{C:green}#1# in #2#{} chance for each",
+                    "scored {C:foolspara_shields}Shield{} suit",
+                    "to give {C:chips}+#3#{} Chips"
+                }
+            },
+            j_foolspara_labradorite = {
+                name = "Labradorite",
+                text = {
+                    "Each {C:foolspara_acorns}Acorn{} suit",
+                    "held in hand gives",
+                    "{X:chips,C:white} X#1# {} Chips"
+                }
+            },
+            j_foolspara_black_fire_opal = {
+                name = "Black Fire Opal",
+                text = {
+                    "Each scored {C:attention}Wild Card{}",
+                    "gives {C:money}$#1#{}, {C:chips}+#2#{} Chips,",
+                    "and {C:mult}+#3#{} Mult"
+                }
+            },
+            j_foolspara_fascimile = {
+                name = "Fascimile",
+                text = {
+                    "Copies ability of",
+                    "{C:attention}Joker{} to the left"
+                }
+            },
+            j_foolspara_lucky_larry = {
+                name = "Lucky Larry",
+                text = {
+                    "{C:green}#1# in #2#{} chance that",
+                    "played cards turn into",
+                    "{C:attention}Lucky{} cards"
+                }
+            },
+            j_foolspara_heartbreaker = {
+                name = "Heartbreaker",
+                text = {
+                    "Discarded {C:hearts}Heart{} cards",
+                    "are destroyed.",
+                    "Gains {X:mult,C:white} X#1# {} Mult",
+                    "per destroyed card",
+                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
+                }
+            }
         },
         Other={
             foolspara_light_suits = {
