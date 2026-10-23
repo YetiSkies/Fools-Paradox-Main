@@ -5,42 +5,65 @@ FOOLSPARA = SMODS.current_mod
 
 --Custom spectrum stuff
 function FOOLSPARA.can_load_spectrums()
-	if (not PB_UTIL or ( PB_UTIL and not PB_UTIL.config.suits_enabled))
-	 and not next(SMODS.find_mod("Bunco"))
-	  and not next(SMODS.find_mod("SixSuits")) 
-	  and not (SMODS.Mods["SpectrumFramework"] or {}).can_load
-	  then
-		return true
-	end
-	return false
+    if (not PB_UTIL or ( PB_UTIL and not PB_UTIL.config.suits_enabled))
+     and not next(SMODS.find_mod("Bunco"))
+      and not next(SMODS.find_mod("SixSuits")) 
+      and not (SMODS.Mods["SpectrumFramework"] or {}).can_load
+      then
+        return true
+    end
+    return false
 end
 
 SMODS.Atlas{
-	key = 'foolsjokers',
-	path = 'FoolsJokers.png',
-	px = 71,
-	py = 95
+    key = 'foolsjokers',
+    path = 'FoolsJokers.png',
+    px = 71,
+    py = 95
 }
 
+SMODS.Atlas {
+  key = 'JokersFool',
+  path = 'JokersFool.png',
+  px = 71,
+  py = 95,
+}
 
-SMODS.Rarity({
-	key = "parallel",
-	loc_txt = {name = "Parallel"},
-	badge_colour = HEX("F1C40F"),
-})
-
-
+--parallel rarity
+SMODS.Rarity {
+    key = "parallel",
+    badge_colour = HEX("00E5FF"), 
+    weight = 12, 
+    pool = true,
+    price_mult = 1
+}
 
 SMODS.Atlas { 
-	key = 'Enhancers',
-	path = 'FoolsEnhancements.png',
-	px = 71,
-	py = 95
+    key = 'Enhancers',
+    path = 'FoolsEnhancements.png',
+    px = 71,
+    py = 95
 }
 
 assert(SMODS.load_file('objects/enhancements/penalty.lua'))()
 assert(SMODS.load_file('objects/enhancements/div.lua'))()
 assert(SMODS.load_file('objects/enhancements/rose_gold.lua'))()
+
+local NFS = require("nativefs")
+local function load_folder(path)
+    local files = NFS.getDirectoryItemsInfo(SMODS.current_mod.path .. path)
+    if files then
+        for i = 1, #files do
+            local file_name = files[i].name
+            if string.sub(file_name, -4) == ".lua" then
+                assert(SMODS.load_file(path .. file_name))()
+            end
+        end
+    end
+end
+
+--joker folder load
+load_folder("objects/jokers/")
 
 --load modded suits
 
@@ -92,44 +115,44 @@ assert(SMODS.load_file('objects/tarot/the_water.lua'))()
 
 --HANDS
 SMODS.Atlas {
-	key = "consumables_atlas",
-	path = "consumables.png",
-	px = 71,
-	py = 95
+    key = "consumables_atlas",
+    path = "consumables.png",
+    px = 71,
+    py = 95
 }
 if not (SMODS.Mods["ArtBox"] or {"artb"}).can_load  then
-	NFS.load(mod_path .. "objects/poker_hands/null.lua")()
-	--planets
-	NFS.load(mod_path .. "objects/planets/vesta.lua")()
+    NFS.load(mod_path .. "objects/poker_hands/null.lua")()
+    --planets
+    NFS.load(mod_path .. "objects/planets/vesta.lua")()
 end
 
 FOOLSPARA.spectrum_name = 'foolspara_spectrum'
 if SpectrumAPI then
-	FOOLSPARA.spectrum_name = 'spa_Spectrum'
+    FOOLSPARA.spectrum_name = 'spa_Spectrum'
 end
 if FOOLSPARA.can_load_spectrums() then
-	if not SpectrumAPI then
-		NFS.load(mod_path .. "objects/poker_hands/spectrum.lua")()
-		NFS.load(mod_path .. "objects/poker_hands/straight_spectrum.lua")()
-		NFS.load(mod_path .. "objects/poker_hands/spectrum_house.lua")()
-		NFS.load(mod_path .. "objects/poker_hands/spectrum_five.lua")()
-	end
+    if not SpectrumAPI then
+        NFS.load(mod_path .. "objects/poker_hands/spectrum.lua")()
+        NFS.load(mod_path .. "objects/poker_hands/straight_spectrum.lua")()
+        NFS.load(mod_path .. "objects/poker_hands/spectrum_house.lua")()
+        NFS.load(mod_path .. "objects/poker_hands/spectrum_five.lua")()
+    end
 
-	--planets
-	NFS.load(mod_path .. "objects/planets/quaoar.lua")()
-	NFS.load(mod_path .. "objects/planets/haumea.lua")()
-	NFS.load(mod_path .. "objects/planets/sedna.lua")()
-	NFS.load(mod_path .. "objects/planets/makemake.lua")()
+    --planets
+    NFS.load(mod_path .. "objects/planets/quaoar.lua")()
+    NFS.load(mod_path .. "objects/planets/haumea.lua")()
+    NFS.load(mod_path .. "objects/planets/sedna.lua")()
+    NFS.load(mod_path .. "objects/planets/makemake.lua")()
 end
 if next(SMODS.find_mod("Bunco")) then
-	NFS.load(mod_path .. "objects/poker_hands/bunco_override.lua")()
+    NFS.load(mod_path .. "objects/poker_hands/bunco_override.lua")()
 
 end
 if next(SMODS.find_mod("SixSuits")) then
-	NFS.load(mod_path .. "objects/poker_hands/six_suits_override.lua")()
+    NFS.load(mod_path .. "objects/poker_hands/six_suits_override.lua")()
 end
 if next(SMODS.find_mod("SpectrumFramework")) then
-	NFS.load(mod_path .. "objects/poker_hands/framework_override.lua")()
+    NFS.load(mod_path .. "objects/poker_hands/framework_override.lua")()
 end
 NFS.load(mod_path .. "objects/poker_hands/light_dark_spectrum.lua")()
 
@@ -138,7 +161,3 @@ assert(SMODS.load_file("objects/blinds.lua"))()
 assert(SMODS.load_file("objects/planets/theoryplanets.lua"))()
 assert(SMODS.load_file("objects/planets/greekplanets.lua"))()
 assert(SMODS.load_file("objects/boosters.lua"))()
-
---Jokers
-
-
