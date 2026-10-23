@@ -17,10 +17,26 @@ SMODS.Joker {
 
     add_to_deck = function(self, card, from_debuff)
         G.GAME.discount_percent = (G.GAME.discount_percent or 0) + card.ability.extra.discount
+        
+        for _, area in ipairs({G.shop_jokers, G.shop_booster, G.shop_vouchers}) do
+            if area and area.cards then
+                for _, c in ipairs(area.cards) do
+                    c:set_cost()
+                end
+            end
+        end
     end,
 
     remove_from_deck = function(self, card, from_debuff)
         G.GAME.discount_percent = (G.GAME.discount_percent or 0) - card.ability.extra.discount
+        
+        for _, area in ipairs({G.shop_jokers, G.shop_booster, G.shop_vouchers}) do
+            if area and area.cards then
+                for _, c in ipairs(area.cards) do
+                    c:set_cost()
+                end
+            end
+        end
     end,
 
     update = function(self, card, dt)
