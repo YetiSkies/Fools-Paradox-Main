@@ -15,13 +15,6 @@ function FOOLSPARA.can_load_spectrums()
     return false
 end
 
-SMODS.Atlas{
-    key = 'foolsjokers',
-    path = 'FoolsJokers.png',
-    px = 71,
-    py = 95
-}
-
 SMODS.Atlas {
   key = 'JokersFool',
   path = 'JokersFool.png',
