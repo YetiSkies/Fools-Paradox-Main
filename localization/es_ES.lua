@@ -181,6 +181,538 @@ return {
             }
         },
         Joker = {
+            j_foolspara_saving_account = {
+                name = "Cuenta de Ahorros",
+                text = {
+                    "Pierdes la {C:attention}mitad{} de tu pago",
+                    "final y se guarda aquí;",
+                    "gana {C:money}$#2#{} al final de la ronda",
+                    "por cada {C:money}$#1#{} guardado",
+                    "{C:inactive}(Actual {C:money}$#3#{C:inactive} guardados, {C:money}+$#4#{C:inactive})"
+                }
+            },
+            j_foolspara_mythic_grotto = {
+                name = "Gruta Mítica",
+                text = {
+                    "Las cartas de {C:attention}Roca{} anotadas",
+                    "se transforman en otra carta de {C:attention}Roca{}",
+                    "con {C:attention}categoría{} y {C:attention}palo{} al azar",
+                    "después de anotar"
+                }
+            },
+            j_foolspara_laugh_out_loud = {
+                name = "Carcajada",
+                text = {
+                    "Las {C:attention}cartas de figura{} jugadas",
+                    "otorgan {C:mult}+#1#{} multi",
+                    "al anotar"
+                }
+            },
+            j_foolspara_prosopagnosia = {
+                name = "Prosopagnosia",
+                text = {
+                    "Ninguna carta se considera",
+                    "{C:attention}carta de figura{}"
+                }
+            },
+            j_foolspara_forbidden_fruit = {
+                name = "Fruto Prohibido",
+                text = {
+                    "{X:mult,C:white} X#1# {} multi",
+                    "Se destruye después",
+                    "de {C:attention}#2#{} rondas"
+                }
+            },
+            j_foolspara_nebula = {
+                name = "Nebulosa",
+                text = {
+                    "Otorga {C:mult}+multi{} equivalente",
+                    "al nivel de la",
+                    "{C:attention}mano de póker{} jugada"
+                }
+            },
+            j_foolspara_rna = {
+                name = "ARN",
+                text = {
+                    "Si el {C:attention}primer descarte{} de la ronda",
+                    "es de {C:attention}1{} sola carta, {C:green}#1# en #2#{} prob.",
+                    "de añadir a la mano una copia",
+                    "con una {C:dark_edition}Edición{} al azar"
+                }
+            },
+            j_foolspara_archer = {
+                name = "Arquero",
+                text = {
+                    "Las cartas anotadas sin",
+                    "{C:attention}mejora{} se vuelven cartas",
+                    "{C:attention}Bono{} o de {C:attention}Castigo{} al azar"
+                }
+            },
+            j_foolspara_anonymous_fool = {
+                name = "Payaso Anónimo",
+                text = {
+                    "{C:mult}+#1#{} multi si la mano jugada",
+                    "contiene {C:attention}#2#{} o más",
+                    "cartas {C:attention}Sin rango{}"
+                }
+            },
+            j_foolspara_bi_color_harlequin = {
+                name = "Arlequín Bicolor",
+                text = {
+                    "Gana {C:mult}+#1#{} multi y pierde {C:chips}-#2#{} fichas",
+                    "por mano jugada; gana {C:chips}+#3#{} fichas",
+                    "y pierde {C:mult}-#4#{} multi por descarte",
+                    "{C:inactive}(Actual {C:chips}+#5#{C:inactive} fichas y {C:mult}+#6#{C:inactive} multi)"
+                }
+            },
+            j_foolspara_magician = {
+                name = "Mago",
+                text = {
+                    "{X:mult,C:white} X#1# {} multi por cada",
+                    "{C:attention}mano de póker única{}",
+                    "jugada en esta ronda",
+                    "{C:inactive}(Actual {X:mult,C:white} X#2# {C:inactive} multi)"
+                }
+            },
+            j_foolspara_bedlam = {
+                name = "Manicomio",
+                text = {
+                    "Impide usar {C:attention}consumibles{};",
+                    "este Comodín gana {X:mult,C:white} X#1# {} multi",
+                    "por cada {C:attention}consumible{} omitido",
+                    "{C:inactive}(Actual {X:mult,C:white} X#2# {C:inactive} multi)"
+                }
+            },
+            j_foolspara_miner = {
+                name = "Minero",
+                text = {
+                    "Destruye las cartas de {C:attention}Roca{} anotadas;",
+                    "este Comodín gana {X:mult,C:white} X#1# {} multi",
+                    "por cada carta de {C:attention}Roca{} destruida",
+                    "{C:inactive}(Actual {X:mult,C:white} X#2# {C:inactive} multi)"
+                }
+            },
+            j_foolspara_wax_replica = {
+                name = "Réplica de Cera",
+                text = {
+                    "Por cada carta destruida,",
+                    "añade a tu baraja una copia",
+                    "permanente con un {C:attention}Sello{} al azar"
+                }
+            },
+            j_foolspara_enigma = {
+                name = "Enigma",
+                text = {
+                    "Crea una carta {C:spectral}Espectral{} al azar",
+                    "si se juega una mano con una",
+                    "deuda de {C:money}$#1#{} o más",
+                    "{C:inactive}(Debe haber espacio)"
+                }
+            },
+            j_foolspara_duchess = {
+                name = "Duquesa",
+                text = {
+                    "Cada {C:attention}Reina{}",
+                    "en la mano",
+                    "otorga {X:chips,C:white} X#1# {} fichas"
+                }
+            },
+            j_foolspara_going_down = {
+                name = "En Picada",
+                text = {
+                    "{X:mult,C:white} X#1# {} multi",
+                    "Cada vez que pierdes dinero,",
+                    "pierdes {C:money}$#2#{} adicionales"
+                }
+            },
+            j_foolspara_midas_touch = {
+                name = "Toque de Midas",
+                text = {
+                    "Las {C:attention}Cartas de Oro{} en la mano",
+                    "tienen {C:green}#1# en #2#{} prob. de convertir",
+                    "las cartas adyacentes en {C:attention}Cartas de Oro{}",
+                    "al final de la ronda"
+                }
+            },
+            j_foolspara_heel = {
+                name = "Rudo",
+                text = {
+                    "{X:mult,C:white} X#1# {} multi",
+                    "Todas las {C:attention}Ciegas{} requieren",
+                    "{X:attention,C:white} X#2# {} fichas para ser derrotadas"
+                }
+            },
+            j_foolspara_landscape = {
+                name = "Paisaje",
+                text = {
+                    "Las cartas numeradas jugadas",
+                    "anotan {C:attention}#1#X{} sus",
+                    "{C:chips}fichas{} base"
+                }
+            },
+            j_foolspara_free_money = {
+                name = "Dinero Gratis",
+                text = {
+                    "Cuesta {C:money}$0{} comprarlo y tiene",
+                    "{C:money}$30{} de {C:attention}valor de venta{};",
+                    "véndelo para destruir {C:attention}#1#{} cartas",
+                    "al azar de la mano o baraja"
+                }
+            },
+            j_foolspara_black_eyed_pea = {
+                name = "Frijol de Ojo Negro",
+                text = {
+                    "Al seleccionar la {C:attention}Ciega{},",
+                    "gana {C:red}+#1#{} descartes;",
+                    "se reduce en {C:red}#2#{} al final de la ronda"
+                }
+            },
+            j_foolspara_lima_bean = {
+                name = "Frijol Lima",
+                text = {
+                    "Al seleccionar la {C:attention}Ciega{},",
+                    "gana {C:blue}+#1#{} manos;",
+                    "se reduce en {C:blue}#2#{} al final de la ronda"
+                }
+            },
+            j_foolspara_glaciation = {
+                name = "Glaciación",
+                text = {
+                    "{C:chips}+#1#{} fichas por cada",
+                    "carta por encima de {C:attention}52{} en",
+                    "tu {C:attention}baraja completa{}",
+                    "{C:inactive}(Actual {C:chips}+#2#{C:inactive} fichas)"
+                }
+            },
+            j_foolspara_royal_mail = {
+                name = "Correo Real",
+                text = {
+                    "Gana {C:money}$#1#{} por cada",
+                    "{C:attention}carta de figura{} descartada"
+                }
+            },
+            j_foolspara_inflation = {
+                name = "Inflación",
+                text = {
+                    "{C:attention}Duplica{} el pago final e intereses;",
+                    "los precios de la tienda suben {C:attention}#2#X{}.",
+                    "Si se vende, los precios suben {C:attention}#3#X{}",
+                    "por el resto de la partida"
+                }
+            },
+            j_foolspara_illusionist = {
+                name = "Ilusionista",
+                text = {
+                    "{C:green}#1# en #2#{} probabilidades de crear",
+                    "una carta de {C:planet}Planeta{} al azar",
+                    "al anotar una mano",
+                    "{C:inactive}(Debe haber espacio)"
+                }
+            },
+            j_foolspara_mystic = {
+                name = "Místico",
+                text = {
+                    "{C:green}#1# en #2#{} probabilidades de crear",
+                    "una copia de cualquier carta",
+                    "de {C:planet}Planeta{} usada",
+                    "{C:inactive}(Debe haber espacio)"
+                }
+            },
+            j_foolspara_carnie = {
+                name = "Feriante",
+                text = {
+                    "{C:attention}+#1#{} tamaño de mano,",
+                    "{C:red}-#2#{} descarte cada ronda"
+                }
+            },
+            j_foolspara_lush = {
+                name = "Ebrio",
+                text = {
+                    "Al seleccionar la {C:attention}Ciega{},",
+                    "gana {C:red}+#1#{} descartes;",
+                    "{C:attention}-#2#{} tamaño de mano"
+                }
+            },
+            j_foolspara_beanie_baby = {
+                name = "Peluche",
+                text = {
+                    "Cada Comodín {C:blue}Común{}",
+                    "otorga {X:chips,C:white} X#1# {} fichas"
+                }
+            },
+            j_foolspara_lion = {
+                name = "León",
+                text = {
+                    "{C:mult}+#1#{} multi por cada",
+                    "{C:money}$#2#{} que tienes",
+                    "{C:inactive}(Actual {C:mult}+#3#{C:inactive} multi)"
+                }
+            },
+            j_foolspara_the_oracle = {
+                name = "El Oráculo",
+                text = {
+                    "Si el {C:attention}primer descarte{} de la ronda es",
+                    "una sola carta {C:attention}Mejorada{}, destrúyela",
+                    "y crea una carta de {C:tarot}Tarot{} al azar",
+                    "{C:inactive}(Debe haber espacio)"
+                }
+            },
+            j_foolspara_pop_quiz = {
+                name = "Examen Sorpresa",
+                text = {
+                    "{X:mult,C:white} X#1# {} multi",
+                    "Todas las {C:attention}Renovaciones{}",
+                    "cuestan {C:attention}#2#X{} más"
+                }
+            },
+            j_foolspara_pocket_change = {
+                name = "Cambio de Bolsillo",
+                text = {
+                    "{C:chips}+#1#{} fichas",
+                    "Pierde {C:chips}-#2#{} fichas",
+                    "al final de la ronda"
+                }
+            },
+            j_foolspara_poke = {
+                name = "Poke",
+                text = {
+                    "{X:chips,C:white} X#1# {} fichas",
+                    "Pierde {X:chips,C:white} X#2# {} fichas",
+                    "por cada carta anotada"
+                }
+            },
+            j_foolspara_polygraph_test = {
+                name = "Prueba del Polígrafo",
+                text = {
+                    "Las cartas jugadas de categoría {C:attention}impar{}",
+                    "otorgan {C:chips}-#1#{} fichas al anotar;",
+                    "las cartas jugadas de categoría {C:attention}par{}",
+                    "otorgan {C:mult}+#2#{} multi al anotar"
+                }
+            },
+            j_foolspara_all_or_nothing = {
+                name = "Todo o Nada",
+                text = {
+                    "Reactiva todas las cartas",
+                    "{C:attention}boca abajo{} {C:attention}#1#{} veces"
+                }
+            },
+            j_foolspara_oven = {
+                name = "Horno",
+                text = {
+                    "Este Comodín gana {X:chips,C:white} X#1# {} fichas",
+                    "por cada {C:attention}consumible{} usado en",
+                    "la ronda; se reinicia al terminar",
+                    "{C:inactive}(Actual {X:chips,C:white} X#2# {C:inactive} fichas)"
+                }
+            },
+            j_foolspara_mortician = {
+                name = "Enterrador",
+                text = {
+                    "Todas las {C:attention}Ciegas{} requieren {C:attention}#1#X{}",
+                    "fichas para ser derrotadas.",
+                    "Al seleccionar la {C:attention}Ciega{}, crea",
+                    "una carta {C:spectral}Espectral{} al azar",
+                    "{C:inactive}(Debe haber espacio)"
+                }
+            },
+            j_foolspara_trapeze = {
+                name = "Trapecio",
+                text = {
+                    "{X:chips,C:white} X#1# {} fichas en la {C:attention}primera{}",
+                    "{C:attention}mano{} de la ronda"
+                }
+            },
+            j_foolspara_blackbeard = {
+                name = "Barbanegra",
+                text = {
+                    "Otorga {C:chips}+fichas{} equivalente a {C:attention}#1#X{}",
+                    "el {C:attention}valor de venta{} de todos los",
+                    "demás {C:attention}Comodines{} que tienes",
+                    "{C:inactive}(Actual {C:chips}+#2#{C:inactive} fichas)"
+                }
+            },
+            j_foolspara_balladeer = {
+                name = "Trovador",
+                text = {
+                    "Al seleccionar la {C:attention}Ciega{},",
+                    "gana {C:red}+#2#{} descartes;",
+                    "{C:attention}-#1#{} tamaño de mano"
+                }
+            },
+            j_foolspara_mirrored_fool = {
+                name = "Payaso Espejado",
+                text = {
+                    "Las cartas anotadas de palos {C:attention}Estándar{}",
+                    "cuentan como su par {C:foolspara_parallel}Paralelo{}",
+                    "{C:inactive}({C:hearts}Corazones{C:inactive}={C:foolspara_roses}Rosas{C:inactive}, {C:spades}Espadas{C:inactive}={C:foolspara_shields}Escudos{C:inactive},",
+                    "{C:diamonds}Diamantes{C:inactive}={C:foolspara_bells}Campanas{C:inactive}, {C:clubs}Tréboles{C:inactive}={C:foolspara_acorns}Bellotas{C:inactive})"
+                }
+            },
+            j_foolspara_straight_ticket = {
+                name = "Boleto Directo",
+                text = {
+                    "Reactiva todas las cartas jugadas",
+                    "si la mano jugada contiene",
+                    "{C:attention}5{} cartas"
+                }
+            },
+            j_foolspara_ringmaster = {
+                name = "Maestro de Ceremonias",
+                text = {
+                    "{C:green}#1# en #2#{} probabilidades de crear",
+                    "una copia con una {C:dark_edition}Edición{} al azar",
+                    "cuando otro {C:attention}Comodín{} es",
+                    "vendido o destruido",
+                    "{C:inactive}(Debe haber espacio)"
+                }
+            },
+            j_foolspara_casino_mask = {
+                name = "Máscara de Casino",
+                text = {
+                    "Cada {C:attention}As{} de {V:1}#2#{} jugado",
+                    "otorga {X:mult,C:white} X#1# {} multi al anotar",
+                    "{s:0.8}El palo cambia al final de la ronda"
+                }
+            },
+            j_foolspara_double_edged_spade = {
+                name = "Espada de Doble Filo",
+                text = {
+                    "Las {C:spades}Espadas{} jugadas otorgan",
+                    "el valor de su categoría como",
+                    "{C:mult}+multi{} y {C:chips}-fichas{} al anotar"
+                }
+            },
+            j_foolspara_revolution = {
+                name = "Revolución",
+                text = {
+                    "Este Comodín gana {X:mult,C:white} X#1# {} multi",
+                    "por cada {C:attention}carta de figura{}",
+                    "destruida",
+                    "{C:inactive}(Actual {X:mult,C:white} X#2# {C:inactive} multi)"
+                }
+            },
+            j_foolspara_starlet = {
+                name = "Estrellita",
+                text = {
+                    "{C:mult}+#1#{} multi,",
+                    "{C:attention}-#2#{} tamaño de mano"
+                }
+            },
+            j_foolspara_build_a_buffoon = {
+                name = "Arma un Bufón",
+                text = {
+                    "Después de {C:attention}#1#{} rondas, véndelo",
+                    "para crear un Comodín {C:red}Raro{}",
+                    "o {C:legendary}Legendario{} al azar",
+                    "{C:inactive}(Actual {C:attention}#2#{C:inactive}/#1#)"
+                }
+            },
+            j_foolspara_tinktank = {
+                name = "Tanque de Ideas",
+                text = {
+                    "Copia la habilidad del",
+                    "{C:attention}Comodín{} de más a la derecha"
+                }
+            },
+            j_foolspara_spuntik = {
+                name = "Spuntik",
+                text = {
+                    "Gana {C:money}$#1#{} al final de la ronda",
+                    "por cada {C:attention}mano de póker única{}",
+                    "jugada en esta ronda",
+                    "{C:inactive}(Actual {C:money}$#2#{C:inactive})"
+                }
+            },
+            j_foolspara_master_of_one = {
+                name = "Maestro de Uno",
+                text = {
+                    "Cada {C:attention}As{} jugado",
+                    "otorga {C:mult}+#1#{} multi",
+                    "al anotar"
+                }
+            },
+            j_foolspara_passport = {
+                name = "Pasaporte",
+                text = {
+                    "{X:mult,C:white} X#1# {} multi si al menos",
+                    "{C:attention}#2#{} cartas de tu {C:attention}baraja completa{}",
+                    "tienen un {C:attention}Sello{}",
+                    "{C:inactive}(Actual {C:attention}#3#{C:inactive}/#2#)"
+                }
+            },
+            j_foolspara_horoscopist = {
+                name = "Horoscopista",
+                text = {
+                    "Al seleccionar la {C:attention}Ciega{},",
+                    "crea una carta de {C:planet}Planeta{} al azar",
+                    "{C:inactive}(Debe haber espacio)"
+                }
+            },
+            j_foolspara_diviner = {
+                name = "Adivino",
+                text = {
+                    "Todas las cartas de {C:tarot}Tarot{} y",
+                    "{C:tarot}Paquetes Arcanos{} en la",
+                    "tienda son {C:attention}gratis{}"
+                }
+            },
+            j_foolspara_shocked_fool = {
+                name = "Payaso Impactado",
+                text = {
+                    "La {C:attention}mano de póker{} que",
+                    "derrota a la {C:attention}Ciega{}",
+                    "sube {C:attention}#1#{} nivel"
+                }
+            },
+            j_foolspara_self_made_fool = {
+                name = "Payaso Autodidacta",
+                text = {
+                    "Otorga {X:mult,C:white} X#1# {} multi por",
+                    "cada {C:money}$#2#{} que tienes",
+                    "{C:inactive}(Actual {X:mult,C:white} X#3# {C:inactive} multi)"
+                }
+            },
+            j_foolspara_cicero = {
+                name = "Cicerón",
+                text = {
+                    "Todas las cartas creadas por",
+                    "habilidades de {C:attention}Comodines{} obtienen",
+                    "una {C:dark_edition}Edición{} al azar"
+                }
+            },
+            j_foolspara_umlaut = {
+                name = "Diéresis",
+                text = {
+                    "Todas las cartas jugadas en la",
+                    "{C:attention}última mano{} de la ronda obtienen",
+                    "una {C:dark_edition}Edición{} al azar tras anotar",
+                    "si no tienen una"
+                }
+            },
+            j_foolspara_horatio = {
+                name = "Horacio",
+                text = {
+                    "Al derrotar a la {C:attention}Ciega Grande{},",
+                    "abre un {C:planet}Paquete Celestial{}; al derrotar",
+                    "a la {C:attention}Ciega Jefe{}, abre un {C:spectral}Paquete del Panteón{}"
+                }
+            },
+            j_foolspara_trivet = {
+                name = "Trébede",
+                text = {
+                    "Otorga {X:mult,C:white} X#1# {} multi por cada",
+                    "{C:attention}Comodín{} a la derecha de este",
+                    "{C:inactive}(Actual {X:mult,C:white} X#2# {C:inactive} multi)"
+                }
+            },
+            j_foolspara_karnak = {
+                name = "Karnak",
+                text = {
+                    "Cada Comodín {C:foolspara_parallel}Paralelo{}",
+                    "otorga {X:mult,C:white} X#1# {} multi"
+                }
+            },
             j_foolspara_mimic = {
                 name = "Imitador",
                 text = {
